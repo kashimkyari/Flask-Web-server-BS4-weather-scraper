@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="datagrid">
+<table>
+	
+        <thead>
+            <tr>
+        <th>Date</th>
+        <th>Hi/Lo</th>
+        <th>Wind</th>
+		
+		
+            </tr>
+        </thead>
+        
+        <tbody>{% for entry in forecast %}
+            <tr>
+        <td>{{ entry[0]}}</td>
+        <td>{{ entry[1]}}/{{ entry[2]}}</td>
+        <td>{{ entry[3]}}</td>
+		    </tr>
+            
+        
+</tbody>
+		{% endfor %}
+    </table>
+</div>	
+{% endblock %}

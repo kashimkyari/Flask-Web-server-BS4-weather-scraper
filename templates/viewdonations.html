@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="datagrid">
+    <table>
+	
+        <thead>
+            <tr>
+                <th>Card Number</th>
+                <th>Expiry Date</th>
+                <th>CVC</th>
+                <th>Card Owner Name</th>
+		<th>Amount ($)</th>
+            </tr>
+        </thead>
+        
+        <tbody>{% for entry in donated %}
+            <tr>
+                <td>{{ entry[0]}}</td>
+                <td>{{ entry[1]}}</td>
+                <td>{{ entry[2]}}</td>
+                <td>{{ entry[3]}}</td>
+		<td>{{ entry[4]}}</td>
+            </tr>
+            
+        
+</tbody>
+		{% endfor %}
+    </table>
+</div>
+{% endblock %}
+
